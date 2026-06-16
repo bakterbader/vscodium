@@ -53,9 +53,6 @@ jobs:
           ref: ${{ env.GITHUB_BRANCH }}
           persist-credentials: false
 
-      - name: Setup Interactive SSH Debug Session
-        uses: mxschmitt/action-tmate@v3
-
       - name: Switch to relevant branch
         env:
           PULL_REQUEST_ID: ${{ github.event.inputs.checkout_pr }}
@@ -174,6 +171,9 @@ jobs:
       - name: Prepare checksums
         run: ./prepare_checksums.sh
         if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' || github.event.inputs.generate_assets == 'true' }}
+
+      - name: Setup Interactive SSH Debug Session
+        uses: mxschmitt/action-tmate@v3
 
       - name: Upload assets
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
