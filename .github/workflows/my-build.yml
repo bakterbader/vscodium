@@ -109,14 +109,17 @@ jobs:
       - name: Create Portable Structure and Package ZIP
         shell: powershell
         run: |
-          # 1. Target the compiled directory inside the extracted archive
-          $appDir = ".\vscode\.build\win32-x64\app"
+          # 1. Target the correct compiled application directory inside the extracted archive
+          $appDir = ".\vscode"
           
-          # 2. Add the portable execution trigger directory
+          # 2. Add the portable execution trigger directory safely inside the core build folder
           New-Item -ItemType Directory -Path "$appDir\data" -Force
           
-          # 3. Compress the folder directly into your final portable ZIP
+          # 3. Compress the folder directly into your final localized portable ZIP root
           Compress-Archive -Path "$appDir\*" -DestinationPath ".\VSCodium-Portable-win32-x64.zip" -Force
+          
+          # 4. Debug check: List directory to force visibility in GitHub logs
+          Get-ChildItem "."
 
       - name: Upload Final Portable Editor
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
