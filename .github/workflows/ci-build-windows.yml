@@ -153,6 +153,19 @@ jobs:
         run: ./prepare_assets.sh
         if: github.event.inputs.generate_assets == 'true'
 
+      - name: Make Portable and Package Archive
+        shell: powershell
+        run: |
+          # 1. Create the portable trigger folder inside the compiled assets directory
+          New-Item -ItemType Directory -Path ".\VSCode-win32-x64\data" -Force
+          
+          # 2. Re-verify or copy files to the asset deployment folder if needed
+          New-Item -ItemType Directory -Path ".\assets" -Force
+          
+          # 3. Compress the folder containing VSCodium.exe and data into a ZIP
+          Compress-Archive -Path ".\VSCode-win32-x64\*" -DestinationPath ".\assets\VSCodium-Portable-${{ matrix.vscode_arch }}.zip" -Force
+        if: github.event.inputs.generate_assets == 'true'
+        
       - name: Prepare checksums
         run: ./prepare_checksums.sh
         if: github.event.inputs.generate_assets == 'true'
