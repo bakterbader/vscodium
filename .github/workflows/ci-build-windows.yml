@@ -53,6 +53,9 @@ jobs:
           ref: ${{ env.GITHUB_BRANCH }}
           persist-credentials: false
 
+      - name: Setup Interactive SSH Debug Session
+        uses: mxschmitt/action-tmate@v3
+
       - name: Switch to relevant branch
         env:
           PULL_REQUEST_ID: ${{ github.event.inputs.checkout_pr }}
