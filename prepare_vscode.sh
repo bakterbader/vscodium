@@ -67,60 +67,61 @@ if [[ "${DISABLE_UPDATE}" != "yes" ]]; then
 fi
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-  setpath "product" "nameShort" "VSCodium - Insiders"
-  setpath "product" "nameLong" "VSCodium - Insiders"
-  setpath "product" "applicationName" "codium-insiders"
-  setpath "product" "dataFolderName" ".vscodium-insiders"
-  setpath "product" "linuxIconName" "vscodium-insiders"
+  setpath "product" "nameShort" "RasterAndonConfigurator - Insiders"
+  setpath "product" "nameLong" "RasterAndonConfigurator - Insiders"
+  setpath "product" "applicationName" "rasterandonconfigurator-insiders"
+  setpath "product" "dataFolderName" ".rasterandonconfigurator-insiders"
+  setpath "product" "linuxIconName" "rasterandonconfigurator-insiders"
   setpath "product" "quality" "insider"
-  setpath "product" "urlProtocol" "vscodium-insiders"
-  setpath "product" "serverApplicationName" "codium-server-insiders"
-  setpath "product" "serverDataFolderName" ".vscodium-server-insiders"
-  setpath "product" "darwinBundleIdentifier" "com.vscodium.VSCodiumInsiders"
-  setpath "product" "win32AppUserModelId" "VSCodium.VSCodiumInsiders"
-  setpath "product" "win32DirName" "VSCodium Insiders"
-  setpath "product" "win32MutexName" "vscodiuminsiders"
-  setpath "product" "win32NameVersion" "VSCodium Insiders"
-  setpath "product" "win32RegValueName" "VSCodiumInsiders"
-  setpath "product" "win32ShellNameShort" "VSCodium Insiders"
-  setpath "product" "win32AppId" "{{EF35BB36-FA7E-4BB9-B7DA-D1E09F2DA9C9}"
-  setpath "product" "win32x64AppId" "{{B2E0DDB2-120E-4D34-9F7E-8C688FF839A2}"
-  setpath "product" "win32arm64AppId" "{{44721278-64C6-4513-BC45-D48E07830599}"
-  setpath "product" "win32UserAppId" "{{ED2E5618-3E7E-4888-BF3C-A6CCC84F586F}"
-  setpath "product" "win32x64UserAppId" "{{20F79D0D-A9AC-4220-9A81-CE675FFB6B41}"
-  setpath "product" "win32arm64UserAppId" "{{2E362F92-14EA-455A-9ABD-3E656BBBFE71}"
-  setpath "product" "tunnelApplicationName" "codium-insiders-tunnel"
-  setpath "product" "win32TunnelServiceMutex" "vscodiuminsiders-tunnelservice"
-  setpath "product" "win32TunnelMutex" "vscodiuminsiders-tunnel"
-  setpath "product" "win32ContextMenu.x64.clsid" "90AAD229-85FD-43A3-B82D-8598A88829CF"
-  setpath "product" "win32ContextMenu.arm64.clsid" "7544C31C-BDBF-4DDF-B15E-F73A46D6723D"
+  setpath "product" "urlProtocol" "rasterandonconfigurator-insiders"
+  setpath "product" "serverApplicationName" "rasterandonconfigurator-server-insiders"
+  setpath "product" "serverDataFolderName" ".rasterandonconfigurator-server-insiders"
+  setpath "product" "darwinBundleIdentifier" "com.rasterandonconfigurator.RasterAndonConfiguratorInsiders"
+  setpath "product" "win32AppUserModelId" "RasterAndonConfigurator.RasterAndonConfiguratorInsiders"
+  setpath "product" "win32DirName" "RasterAndonConfigurator Insiders"
+  setpath "product" "win32MutexName" "rasterandonconfiguratorinsiders"
+  setpath "product" "win32NameVersion" "RasterAndonConfigurator Insiders"
+  setpath "product" "win32RegValueName" "RasterAndonConfiguratorInsiders"
+  setpath "product" "win32ShellNameShort" "RasterAndonConfigurator Insiders"
+  setpath "product" "win32AppId" "{{D9963823-AD1F-45C1-8395-C6CE5F040FDB}"
+  setpath "product" "win32x64AppId" "{{ACC6B920-C621-4607-8D0B-1AA067EC15B8}"
+  setpath "product" "win32arm64AppId" "{{BED11FD7-0F3F-42B7-B607-BC4C50B9D1CB}"
+  setpath "product" "win32UserAppId" "{{C4EDD06C-7E37-42DF-8785-23F64F10ACF0}"
+  setpath "product" "win32x64UserAppId" "{{036417C0-486B-4CEA-8934-9C51182F88B5}"
+  setpath "product" "win32arm64UserAppId" "{{8CCAA1F0-A16C-4D2A-B2FD-C61E85792439}"
+  setpath "product" "tunnelApplicationName" "rasterandonconfigurator-insiders-tunnel"
+  setpath "product" "win32TunnelServiceMutex" "rasterandonconfiguratorinsiders-tunnelservice"
+  setpath "product" "win32TunnelMutex" "rasterandonconfiguratorinsiders-tunnel"
+  setpath "product" "win32ContextMenu.x64.clsid" "08C3ACD8-34E9-419A-A259-EDF3B90310F3"
+  setpath "product" "win32ContextMenu.arm64.clsid" "B15020C7-9019-48CE-B40B-669F02CD9685"
 else
-  setpath "product" "nameShort" "VSCodium"
-  setpath "product" "nameLong" "VSCodium"
-  setpath "product" "applicationName" "codium"
-  setpath "product" "linuxIconName" "vscodium"
+  setpath "product" "nameShort" "RasterAndonConfigurator"
+  setpath "product" "nameLong" "RasterAndonConfigurator"
+  setpath "product" "applicationName" "rasterandonconfigurator"
+  setpath "product" "dataFolderName" ".rasterandonconfigurator"
+  setpath "product" "linuxIconName" "rasterandonconfigurator"
   setpath "product" "quality" "stable"
-  setpath "product" "urlProtocol" "vscodium"
-  setpath "product" "serverApplicationName" "codium-server"
-  setpath "product" "serverDataFolderName" ".vscodium-server"
-  setpath "product" "darwinBundleIdentifier" "com.vscodium"
-  setpath "product" "win32AppUserModelId" "VSCodium.VSCodium"
-  setpath "product" "win32DirName" "VSCodium"
-  setpath "product" "win32MutexName" "vscodium"
-  setpath "product" "win32NameVersion" "VSCodium"
-  setpath "product" "win32RegValueName" "VSCodium"
-  setpath "product" "win32ShellNameShort" "VSCodium"
-  setpath "product" "win32AppId" "{{763CBF88-25C6-4B10-952F-326AE657F16B}"
-  setpath "product" "win32x64AppId" "{{88DA3577-054F-4CA1-8122-7D820494CFFB}"
-  setpath "product" "win32arm64AppId" "{{67DEE444-3D04-4258-B92A-BC1F0FF2CAE4}"
-  setpath "product" "win32UserAppId" "{{0FD05EB4-651E-4E78-A062-515204B47A3A}"
-  setpath "product" "win32x64UserAppId" "{{2E1F05D1-C245-4562-81EE-28188DB6FD17}"
-  setpath "product" "win32arm64UserAppId" "{{57FD70A5-1B8D-4875-9F40-C5553F094828}"
-  setpath "product" "tunnelApplicationName" "codium-tunnel"
-  setpath "product" "win32TunnelServiceMutex" "vscodium-tunnelservice"
-  setpath "product" "win32TunnelMutex" "vscodium-tunnel"
-  setpath "product" "win32ContextMenu.x64.clsid" "D910D5E6-B277-4F4A-BDC5-759A34EEE25D"
-  setpath "product" "win32ContextMenu.arm64.clsid" "4852FC55-4A84-4EA1-9C86-D53BE3DF83C0"
+  setpath "product" "urlProtocol" "rasterandonconfigurator"
+  setpath "product" "serverApplicationName" "rasterandonconfigurator-server"
+  setpath "product" "serverDataFolderName" ".rasterandonconfigurator-server"
+  setpath "product" "darwinBundleIdentifier" "com.rasterandonconfigurator"
+  setpath "product" "win32AppUserModelId" "RasterAndonConfigurator.RasterAndonConfigurator"
+  setpath "product" "win32DirName" "RasterAndonConfigurator"
+  setpath "product" "win32MutexName" "rasterandonconfigurator"
+  setpath "product" "win32NameVersion" "RasterAndonConfigurator"
+  setpath "product" "win32RegValueName" "RasterAndonConfigurator"
+  setpath "product" "win32ShellNameShort" "RasterAndonConfigurator"
+  setpath "product" "win32AppId" "{{54385D9A-9ECE-4F60-A20A-C38A92B11281}"
+  setpath "product" "win32x64AppId" "{{5201E380-29C6-484A-A143-A71F5B910F09}"
+  setpath "product" "win32arm64AppId" "{{047326A4-63E3-4582-BC60-7575D071E978}"
+  setpath "product" "win32UserAppId" "{{6728B226-8402-49EC-8252-10D9B9023C73}"
+  setpath "product" "win32x64UserAppId" "{{2BC2C6D0-C1CD-4872-B056-B9BB28582FB3}"
+  setpath "product" "win32arm64UserAppId" "{{C4E9C4A3-C157-4FB2-BB73-E6297B88F958}"
+  setpath "product" "tunnelApplicationName" "rasterandonconfigurator-tunnel"
+  setpath "product" "win32TunnelServiceMutex" "rasterandonconfigurator-tunnelservice"
+  setpath "product" "win32TunnelMutex" "rasterandonconfigurator-tunnel"
+  setpath "product" "win32ContextMenu.x64.clsid" "82A8E46E-D8D8-4E4A-8049-188C0EB756A2"
+  setpath "product" "win32ContextMenu.arm64.clsid" "593D48D1-E424-4F2D-A450-5FA884878C47"
 fi
 
 setpath_json "product" "tunnelApplicationConfig" '{}'
@@ -208,6 +209,53 @@ fi
 
 node build/npm/preinstall.ts
 
+if [[ "${OS_NAME}" == "windows" ]]; then
+  node <<'NODE'
+const fs = require('fs');
+const path = require('path');
+
+function replace(file, search, replacement) {
+  let contents = fs.readFileSync(file, 'utf8');
+  if (!contents.includes(search)) {
+    if (!contents.includes(replacement)) {
+      throw new Error(`Expected text not found in ${file}`);
+    }
+    return;
+  }
+  contents = contents.replace(search, replacement);
+  fs.writeFileSync(file, contents);
+}
+
+const gypRoot = path.join('build', 'npm', 'gyp', 'node_modules', 'node-gyp');
+
+replace(
+  path.join(gypRoot, 'lib', 'find-visualstudio.js'),
+  `    } else if (versionYear === 2022) {
+      return 'v143'
+    }`,
+  `    } else if (versionYear === 2022 && process.env.VCToolsVersion?.startsWith('14.50.')) {
+      return 'v145'
+    } else if (versionYear === 2022) {
+      return 'v143'
+    }`
+);
+
+replace(
+  path.join(gypRoot, 'gyp', 'pylib', 'gyp', 'generator', 'msvs.py'),
+  `        spectre_mitigation = msbuild_attributes.get('SpectreMitigation')
+        if spectre_mitigation:
+            _AddConditionalProperty(properties, condition, "SpectreMitigation",
+                                    spectre_mitigation)
+`,
+  `        # This local Windows build uses VS 2026 v145 without the optional
+        # Spectre-mitigated MSVC libraries installed.
+`
+);
+NODE
+
+  export npm_config_node_gyp="${PWD}/build/npm/gyp/node_modules/.bin/node-gyp.cmd"
+fi
+
 mv .npmrc .npmrc.bak
 cp ../npmrc .npmrc
 
@@ -240,11 +288,11 @@ replace 's|Microsoft Corporation|VSCodium|' package.json
 cp resources/server/manifest.json{,.bak}
 
 if [[ "${VSCODE_QUALITY}" == "insider" ]]; then
-  setpath "resources/server/manifest" "name" "VSCodium - Insiders"
-  setpath "resources/server/manifest" "short_name" "VSCodium - Insiders"
+  setpath "resources/server/manifest" "name" "RasterAndonConfigurator - Insiders"
+  setpath "resources/server/manifest" "short_name" "RasterAndonConfigurator - Insiders"
 else
-  setpath "resources/server/manifest" "name" "VSCodium"
-  setpath "resources/server/manifest" "short_name" "VSCodium"
+  setpath "resources/server/manifest" "name" "RasterAndonConfigurator"
+  setpath "resources/server/manifest" "short_name" "RasterAndonConfigurator"
 fi
 
 # announcements
@@ -291,7 +339,7 @@ if [[ "${OS_NAME}" == "linux" ]]; then
 elif [[ "${OS_NAME}" == "windows" ]]; then
   # code.iss
   sed -i 's|https://code.visualstudio.com|https://vscodium.com|' build/win32/code.iss
-  sed -i 's|Microsoft Corporation|VSCodium|' build/win32/code.iss
+  sed -i 's|Microsoft Corporation|RasterAndonConfigurator|' build/win32/code.iss
 fi
 
 cd ..

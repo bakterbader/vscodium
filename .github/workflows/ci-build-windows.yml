@@ -23,8 +23,8 @@ on:
       - "**/*.md"
 
 env:
-  APP_NAME: VSCodium
-  BINARY_NAME: ${{ (github.ref == 'refs/heads/insider' || (github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'insider')) && 'codium-insiders' || 'codium' }}
+  APP_NAME: RasterAndonConfigurator
+  BINARY_NAME: ${{ (github.ref == 'refs/heads/insider' || (github.event_name == 'pull_request' && github.event.pull_request.base.ref == 'insider')) && 'rasterandonconfigurator-insiders' || 'rasterandonconfigurator' }}
   GH_REPO_PATH: ${{ github.repository }}
   GITHUB_BRANCH: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.sha || github.event.head }}
   ORG_NAME: ${{ github.repository_owner }}
@@ -149,6 +149,13 @@ jobs:
         run: ./build/windows/package.sh
 
       - name: Prepare assets
+        env:
+          SHOULD_BUILD_EXE_SYS: 'no'
+          SHOULD_BUILD_EXE_USR: 'no'
+          SHOULD_BUILD_MSI: 'no'
+          SHOULD_BUILD_MSI_NOUP: 'no'
+          SHOULD_BUILD_ZIP: 'yes'
+          SHOULD_BUILD_CLI: 'no'
         run: ./prepare_assets.sh
         if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' || github.event.inputs.generate_assets == 'true' }}
 
@@ -165,7 +172,7 @@ jobs:
           New-Item -ItemType Directory -Path ".\assets" -Force
           
           # 4. Generate the final clean archive
-          Compress-Archive -Path "$buildDir\*" -DestinationPath ".\assets\VSCodium-Portable-win32-${{ matrix.vscode_arch }}.zip" -Force
+          Compress-Archive -Path "$buildDir\*" -DestinationPath ".\assets\RasterAndonConfigurator-Portable-win32-${{ matrix.vscode_arch }}.zip" -Force
         if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' || github.event.inputs.generate_assets == 'true' }}
         
       - name: Prepare checksums

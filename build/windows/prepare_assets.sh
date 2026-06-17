@@ -7,7 +7,11 @@ npm run gulp "vscode-win32-${VSCODE_ARCH}-inno-updater"
 # . ../build/windows/appx/build.sh
 
 if [[ "${SHOULD_BUILD_ZIP}" != "no" ]]; then
-  7z.exe a -tzip "../assets/${APP_NAME}-win32-${VSCODE_ARCH}-${RELEASE_VERSION}.zip" -x!CodeSignSummary*.md -x!tools "../VSCode-win32-${VSCODE_ARCH}/*" -r
+  if command -v 7z.exe > /dev/null 2>&1; then
+    7z.exe a -tzip "../assets/${APP_NAME}-win32-${VSCODE_ARCH}-${RELEASE_VERSION}.zip" -x!CodeSignSummary*.md -x!tools "../VSCode-win32-${VSCODE_ARCH}/*" -r
+  else
+    powershell.exe -NoProfile -Command "\$ErrorActionPreference = 'Stop'; \$source = (Resolve-Path '../VSCode-win32-${VSCODE_ARCH}').Path; \$dest = Join-Path (Resolve-Path '../assets').Path '${APP_NAME}-win32-${VSCODE_ARCH}-${RELEASE_VERSION}.zip'; if (Test-Path -LiteralPath \$dest) { Remove-Item -LiteralPath \$dest -Force }; Get-ChildItem -LiteralPath \$source -Force | Where-Object { \$_.Name -ne 'tools' -and \$_.Name -notlike 'CodeSignSummary*.md' } | Compress-Archive -DestinationPath \$dest -CompressionLevel Optimal"
+  fi
 fi
 
 if [[ "${SHOULD_BUILD_EXE_SYS}" != "no" ]]; then
