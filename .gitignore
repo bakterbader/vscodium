@@ -1,6 +1,10 @@
 vscode*
+!src/stable/src/vs/sessions/browser/media/vscode-icon.svg
+!src/insider/src/vs/sessions/browser/media/vscode-icon.svg
 VS*/*
 VSCode*
+!src/stable/src/vs/sessions/browser/media/vscode-icon.svg
+!src/insider/src/vs/sessions/browser/media/vscode-icon.svg
 VSCodium*
 .DS_Store
 *.env
